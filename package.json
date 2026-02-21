@@ -9,12 +9,12 @@
     "exports": {
         ".": {
             "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/index.js"
+                "default": "./dist/index.js",
+                "types": "./dist/index.d.ts"
             },
             "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/index.cjs"
+                "default": "./dist/index.cjs",
+                "types": "./dist/index.d.cts"
             }
         }
     },
@@ -35,6 +35,9 @@
     "module": "dist/index.js",
     "name": "@resulted/results",
     "packageManager": "pnpm@10.26.1",
+    "publishConfig": {
+        "access": "public"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/JoshBashed/resulted-results.git"
