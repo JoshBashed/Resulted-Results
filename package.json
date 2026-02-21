@@ -1,0 +1,52 @@
+{
+    "author": "Josh <josh@bashed.sh>",
+    "description": "A TypeScript library for handling results and errors in a functional programming style.",
+    "devDependencies": {
+        "@biomejs/biome": "^2.4.4",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3"
+    },
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        }
+    },
+    "files": [
+        "dist",
+        "src",
+        "LICENSE.md"
+    ],
+    "keywords": [
+        "result",
+        "error-handling",
+        "typescript",
+        "functional",
+        "monad"
+    ],
+    "license": "ISC",
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "name": "@resulted/results",
+    "packageManager": "pnpm@10.26.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JoshBashed/resulted-results.git"
+    },
+    "scripts": {
+        "build": "tsup src/index.ts --format esm,cjs --dts",
+        "format": "biome check --write",
+        "lint": "biome check",
+        "prepublishOnly": "pnpm run build",
+        "typecheck": "tsc --noEmit"
+    },
+    "type": "module",
+    "types": "dist/index.d.ts",
+    "version": "1.0.0"
+}
